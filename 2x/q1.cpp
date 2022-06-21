@@ -13,14 +13,14 @@ Write a single-file program (named main.cpp) that reads two separate integers fr
 #include <iostream>
 
 int readNumber();
-int writeAnswer(int x,int y);
+void writeAnswer(int x);
 
 int main(){
     int x{readNumber()};
     int y{readNumber()};
 
     // get the number
-    std::cout<<"Addition of "<<x<<" and "<<y<<" is "<<writeAnswer(x,y);
+    writeAnswer(x+y);
 
 }
 
@@ -32,8 +32,6 @@ int readNumber(){
     return x;    
 }
 
-int writeAnswer(int x,int y){
-    int sum{};
-    sum = x+y;
-    return sum;
+void writeAnswer(int x){
+    std::cout<<"Addition is :"<<x;
 }
