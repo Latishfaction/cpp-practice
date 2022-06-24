@@ -1,8 +1,11 @@
-#include "add.h" // Insert contents of add.h at this point.  Note use of double quotes here.
 #include <iostream>
+#include "log.h"
+void log(const char* message);
 
-int main()
-{
-    std::cout << "The sum of 3 and 4 is " << add(3, 4) << '\n';
-    return 0;
+int main(){
+    log("Hello World");
+
+    return 0;  
+
+    
 }
