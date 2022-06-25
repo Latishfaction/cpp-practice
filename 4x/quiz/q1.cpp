@@ -14,15 +14,15 @@ Enter one of the following: +, -, *, or /: *
 
 double getValues();
 char chooseOperation();
-double operation(char operato,double a,double b);
+void print(char operato,double a,double b);
 
 int main(){
     
     double a{getValues()};
     double b{getValues()};
-    double answer{operation(chooseOperation(),a,b)};
+    char operation{chooseOperation()};
 
-    std::cout<<a<<" and "<<b<<" is : "<<answer;
+    print(operation,a,b);
 
     return 0;
 }
@@ -46,17 +46,17 @@ char chooseOperation(){
     return operat;
 }
 
-double operation(char operato,double a,double b){
+void print(char operato,double a,double b){
     if (operato =='+'){
-        return a+b;
+        std::cout << a << operato << b << " is " << a + b << '\n';
     }
     else if (operato == '/'){
-        return a/b;
+        std::cout << a << operato << b << " is " << a / b << '\n';
     }
     else if (operato == '-'){
-        return a-b;
+        std::cout << a << operato << b << " is " << a - b << '\n';
     }
     else if (operato == '*'){
-        return a*b;
+        std::cout << a << operato << b << " is " << a * b << '\n';
     }
 }
