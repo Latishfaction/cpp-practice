@@ -24,8 +24,11 @@ int main(){
     int larger{};
     std::cin>>larger;
 
+    // checking if smaler value is larger then swap the values
     if(smaller > larger)
         swap(smaller,larger);
+
+    // printing the values as it is
     else{
         std::cout<<"The smaller value is :  "<<smaller<<std::endl;
         std::cout<<"The larger value is :  "<<larger<<std::endl;
@@ -38,10 +41,14 @@ int main(){
 void swap(int smaller,int larger){
     int temp{};
 
+    // storing smaler value to temp
     temp = smaller;
+    // as storing larger vaue to smaller (we've taken backup for smaller value)
     smaller = larger;
+    // storing the smaller value(backed up in temp) to the larger
     larger = temp;
 
+    std::cout<<"-----Swapping of numbers----\n";
     std::cout<<"The smaller value is : "<<smaller<<std::endl;
     std::cout<<"The larger value is :"<<larger<<std::endl;
 }
